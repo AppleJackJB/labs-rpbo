@@ -15,11 +15,11 @@ jobs:
 
     steps:
       # 1. Checkout code
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       # 2. Setup Java 17
       - name: Set up JDK 17
-        uses: actions/setup-java@v3
+        uses: actions/setup-java@v4
         with:
           java-version: '17'
           distribution: 'temurin'
@@ -52,9 +52,9 @@ jobs:
             grep -i "ssl\|tls\|key-store\|key-alias" src/main/resources/application.properties || echo "No TLS config found"
           fi
 
-      # 8. Upload artifact
+      # 8. Upload artifact (ИСПРАВЛЕННАЯ ВЕРСИЯ)
       - name: Upload JAR artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: bank-service-jar
           path: target/*.jar
