@@ -1,0 +1,9 @@
+# SSL/TLS certificates and keys 
+**/keystore.p12 
+**/*.key 
+**/*.p12 
+**/certs/ 
+target/ 
+.idea/ 
+*.iml 
+.github/workflows/*.tmp 
